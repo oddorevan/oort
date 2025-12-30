@@ -2,6 +2,7 @@ import pygame
 from logger import log_state
 from constants import *
 
+
 def main():
     print(f"""Starting Asteroids with pygame version: {pygame.version.ver} \n
         Screen width: {SCREEN_WIDTH} \n
@@ -17,6 +18,7 @@ def main():
                 return
         screen.fill("black")
         pygame.display.flip()
+
 
 if __name__ == "__main__":
     main()
