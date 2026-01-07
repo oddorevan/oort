@@ -7,6 +7,7 @@ from asteroidfield import AsteroidField
 from shot import Shot
 import sys
 
+
 def main():
     print(f"""Starting Asteroids with pygame version: {pygame.version.ver} \n
         Screen width: {SCREEN_WIDTH} \n
@@ -47,10 +48,12 @@ def main():
                 sys.exit()
             for bullet in shots:
                 if roid.collides_with(bullet):
-                    roid.kill()
+                    roid.split()
                     bullet.kill()
                     log_event("asteroid_shot")
                 else:
                     continue
+
+
 if __name__ == "__main__":
     main()
